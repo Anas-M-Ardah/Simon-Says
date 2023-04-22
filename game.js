@@ -12,7 +12,7 @@ $(".btn").click(function () {
     checkAnswer(userClickedPattern.length-1);
 });
 
-$(".body").ontouchstart(function () { 
+$("body").ontouchstart(function () { 
     var userChosenColour = $(this).attr('id');  
     userClickedPattern.push(userChosenColour);
     animatePress(userChosenColour);
