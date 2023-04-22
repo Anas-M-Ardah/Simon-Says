@@ -17,12 +17,22 @@ body {
 
 }
 
-.btn {
+/*Old Code
+/* .btn {
   margin: 25px;
   display: inline-block;
   height: 200px;
   width: 200px;
   border: 10px solid black;
+  border-radius: 20%;
+} */
+
+.btn {
+  margin: 1.5625rem; /* 25px / 16px */
+  display: inline-block;
+  height: 12.5rem; /* 200px / 16px */
+  width: 12.5rem; /* 200px / 16px */
+  border: 0.625rem solid black; /* 10px / 16px */
   border-radius: 20%;
 }
 
@@ -48,6 +58,28 @@ body {
 }
 
 .pressed {
-  box-shadow: 0 0 20px white;
+  box-shadow: 0 0 1.25rem white;
   background-color: grey;
 }
+
+/* Small screens */
+@media (max-width: 767px) {
+  .container {
+    width: 90%;
+  }
+}
+
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 70%;
+  }
+}
+
+/* Large screens */
+@media (min-width: 992px) {
+  .container {
+    width: 50%;
+  }
+}
+
