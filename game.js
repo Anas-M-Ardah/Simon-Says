@@ -12,6 +12,14 @@ $(".btn").click(function () {
     checkAnswer(userClickedPattern.length-1);
 });
 
+$(".btn").ontouchstart(function () { 
+    var userChosenColour = $(this).attr('id');  
+    userClickedPattern.push(userChosenColour);
+    animatePress(userChosenColour);
+    playSound(userChosenColour);
+    checkAnswer(userClickedPattern.length-1);
+});
+
 $("body").keypress(function (e) { 
     if(!started){
         nextSequence();
